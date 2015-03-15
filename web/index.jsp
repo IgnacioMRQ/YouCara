@@ -1,5 +1,5 @@
 
 <%
 	//redirect to the book list servlet
-	response.sendRedirect("Portada");
+	response.sendRedirect("Login");
 %>
