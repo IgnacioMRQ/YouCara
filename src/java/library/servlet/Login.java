@@ -13,13 +13,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import library.model.Usuario;
 
 /**
  *
  * @author Francisco
  */
-@WebServlet(name = "Portada", urlPatterns = {"/Portada"})
-public class Portada extends HttpServlet {
+@WebServlet(name = "Login", urlPatterns = {"/Login"})
+public class Login extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,14 +37,35 @@ public class Portada extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 
+            HttpSession session = request.getSession();
+            //Comprobamos si el usuario esta ya loggeado.
+            Usuario usuario = (Usuario) session.getAttribute("usuario");
+            if (usuario != null) {
+                response.sendRedirect("Portada");
+                return;
+            }
+            
+
+            //Comprobamos si se nos proporcionan los datos necesarios para el loggeo y si es asi lo realizamos.
+            //Posteriormente aqui se comprobará si la pass y el correo son validos.
+            if (request.getParameter("id") != null) {
+                int id = Integer.parseInt(request.getParameter("id"));
+                session.setAttribute("usuario", new Usuario(id));
+                response.sendRedirect("Portada");
+
+                return;
+            }
+
             //Saca el dispatcher
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/portada.jsp");
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
             //Redirige a la vista para mostrar la portada
             dispatcher.forward(request, response);
+
         }
+
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
