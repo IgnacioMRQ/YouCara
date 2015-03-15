@@ -15,12 +15,9 @@
         <!-- CSS de Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
-        <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        
+        <!-- CSS del proyecto -->
+        <link href="css/youcara.css" rel="stylesheet" type="text/css">
+
         <!-- Librería jQuery requerida por los plugins de JavaScript -->
         <script src="http://code.jquery.com/jquery.js"></script>
 
@@ -28,7 +25,7 @@
              incluir archivos JavaScript individuales de los únicos
              plugins que utilices) -->
         <script src="js/bootstrap.min.js"></script>
-        
+
     </head>
     <body>
 
@@ -68,10 +65,74 @@
                 </div>
             </div>
         </nav>
-        
-        
-        
-        
-        
+
+
+
+        <div id="izquierda">
+            <h2>Nombre de usuario</h2>
+            
+            <table id="margen" border="1">
+                <td height="100" width="100">Foto</td>
+                
+            </table>
+
+        </div>
+
+
+
+        <div id="centro">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>Publicacion 1</h3>
+                </li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>Publicacion 2</h3>
+                </li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>Publicacion 3</h3>
+                </li>
+            </ul>
+
+
+
+            <center>
+                <ul class="pagination pagination-lg">
+                    <li class="disabled"><a href="#">«</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </center>
+
+        </div>
+
+
+
+
+
+        <div id="derecha">
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="badge">14</span>
+                    <a href="#">Solicitudes de amistad pendientes</a>
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">2</span>
+                    <a href="#">Comentarios en publicaciones nuevos</a>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+
+
     </body>
 </html>

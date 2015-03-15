@@ -8,3 +8,19 @@ and open the template in the editor.
     Author     : Francisco
 */
 
+#izquierda {
+    width:20%;
+    float:left;
+}
+#centro {
+    width:60%;
+    float:left;
+}
+#derecha {
+    width:20%;
+    float:left;
+} 
+
+#margen {
+    margin-left: 5%;
+}
