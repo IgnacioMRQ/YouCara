@@ -6,7 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +28,7 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -58,7 +57,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cuenta<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="#">Datos Personales</a></li>
-                                <li><a href="#">Cerrar Sesion</a></li>
+                                <li><a href="Logout">Cerrar Sesion</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -69,11 +68,11 @@
 
 
         <div id="izquierda">
-            <h2>Nombre de usuario</h2>
-            
-            <table id="margen" border="1">
+            <h2 class="margenIzquierdo" >Nombre de usuario</h2>
+
+            <table class="margenIzquierdo" border="1">
                 <td height="100" width="100">Foto</td>
-                
+
             </table>
 
         </div>
@@ -81,8 +80,17 @@
 
 
         <div id="centro">
+
+            <div align="right" class="margenDerecho">
+                <a href="#" class="btn btn-primary btn-lg">Publicar</a>
+            </div>
+            </br>
+            </br>
+
+
             <ul class="list-group">
                 <li class="list-group-item">
+
                     <h3>Publicacion 1</h3>
                 </li>
             </ul>
@@ -97,8 +105,6 @@
                 </li>
             </ul>
 
-
-
             <center>
                 <ul class="pagination pagination-lg">
                     <li class="disabled"><a href="#">«</a></li>
@@ -108,7 +114,6 @@
                     <li><a href="#">»</a></li>
                 </ul>
             </center>
-
         </div>
 
 

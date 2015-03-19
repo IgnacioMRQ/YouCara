@@ -21,6 +21,9 @@ and open the template in the editor.
     float:left;
 } 
 
-#margen {
+.margenIzquierdo {
     margin-left: 5%;
+}
+.margenDerecho {
+    margin-right: 3%;
 }
